@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-goc-green: #3d8b40,
+    --color-goc-green-dark: #367239,
+    --color-goc-gray: #6b7280,
+}
+
+.section-title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.section-title-dark {
+  color: #374151;
+}
+
+.border-goc-green {
+  border-color: #3d8b40;
+}
+
+.bg-goc-green {
+  background-color: #3d8b40;
+}
+
+.bg-goc-green-dark {
+  background-color: #367239;
+}
+
+.bg-goc-gray {
+  background-color: #6b7280;
+}
+
+.text-goc-green {
+  color: #3d8b40;
+}
+
+.text-goc-green-dark {
+  color: #367239;
+}
+
+.text-goc-gray {
+  color: #6b7280;
+}
