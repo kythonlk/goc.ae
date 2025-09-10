@@ -1,52 +1,248 @@
+import { MapPin, Mail, Phone, Clock, ExternalLink } from "lucide-react";
 import Logo from "./assets/logo.jpeg";
+import ContactForm from "./ContactForm";
 
 export default function Footer() {
   return (
     <footer id="contact" className="bg-white">
+      {/* Contact Form Section */}
+      <ContactForm />
+
+      {/* Main Footer */}
       <div className="relative bg-goc-green">
-        <div className="relative container mx-auto px-6 py-16 text-white grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div className="lg:col-span-2">
-            <img src={Logo} alt="GOC Logo" className="h-16 mb-4" />
-            <p className="opacity-80 max-w-sm">A leading Civil Engineering partner synonymous with reliability, commitment, and excellence in every project.</p>
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 text-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <div className="mb-6">
+                <img
+                  src={Logo}
+                  alt="GOC Logo"
+                  className="h-16 sm:h-20 mb-4"
+                />
+              </div>
+              <p className="text-white/90 mb-6 leading-relaxed max-w-md">
+                A leading Civil Engineering partner synonymous with reliability,
+                commitment, and excellence in every project. Building the future
+                with 40+ years of experience.
+              </p>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                <a
+                  href="#"
+                  className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300 hover:scale-105"
+                  aria-label="LinkedIn"
+                >
+                  <ExternalLink size={20} />
+                </a>
+                <a
+                  href="#"
+                  className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300 hover:scale-105"
+                  aria-label="Facebook"
+                >
+                  <ExternalLink size={20} />
+                </a>
+                <a
+                  href="#"
+                  className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300 hover:scale-105"
+                  aria-label="Twitter"
+                >
+                  <ExternalLink size={20} />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 relative">
+                Quick Links
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-white/40 mt-2"></div>
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#about"
+                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-white/40 rounded-full mr-3 group-hover:bg-white transition-colors duration-300"></span>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-white/40 rounded-full mr-3 group-hover:bg-white transition-colors duration-300"></span>
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-white/40 rounded-full mr-3 group-hover:bg-white transition-colors duration-300"></span>
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#safety"
+                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-white/40 rounded-full mr-3 group-hover:bg-white transition-colors duration-300"></span>
+                    Health & Safety
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#clients"
+                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-white/40 rounded-full mr-3 group-hover:bg-white transition-colors duration-300"></span>
+                    Our Clients
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 relative">
+                Contact Info
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-white/40 mt-2"></div>
+              </h4>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3 group">
+                  <div className="bg-white/10 p-2 rounded-lg group-hover:bg-white/20 transition-all duration-300">
+                    <MapPin
+                      size={18}
+                      className="text-white flex-shrink-0 mt-0.5"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-white/90 leading-relaxed">
+                      P.O.Box 48582
+                      <br />
+                      Dubai, UAE
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3 group">
+                  <div className="bg-white/10 p-2 rounded-lg group-hover:bg-white/20 transition-all duration-300">
+                    <Mail
+                      size={18}
+                      className="text-white flex-shrink-0 mt-0.5"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="mailto:info@goc.ae"
+                      className="text-white/90 hover:text-white transition-colors duration-300"
+                    >
+                      info@goc.ae
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3 group">
+                  <div className="bg-white/10 p-2 rounded-lg group-hover:bg-white/20 transition-all duration-300">
+                    <Phone
+                      size={18}
+                      className="text-white flex-shrink-0 mt-0.5"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="tel:+97145120777"
+                      className="text-white/90 hover:text-white transition-colors duration-300"
+                    >
+                      +971 4 512 0777
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3 group">
+                  <div className="bg-white/10 p-2 rounded-lg group-hover:bg-white/20 transition-all duration-300">
+                    <Clock
+                      size={18}
+                      className="text-white flex-shrink-0 mt-0.5"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      Mon-Fri: 8AM-6PM
+                      <br />
+                      Sat: 9AM-4PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2 opacity-80">
-              <li><a href="#about" className="hover:opacity-100">About Us</a></li>
-              <li><a href="#services" className="hover:opacity-100">Services</a></li>
-              <li><a href="#projects" className="hover:opacity-100">Projects</a></li>
-              <li><a href="#safety" className="hover:opacity-100">Health & Safety</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4">Contact Info</h4>
-            <ul className="space-y-3 opacity-80">
-              <li className="flex items-start">
-                <svg className="w-5 h-5 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                </svg>
-                <span>P.O.Box 48582 Dubai, UAE</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-                <a href="mailto:info@goc.ae" className="hover:opacity-100">info@goc.ae</a>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                </svg>
-                <a href="tel:+97145120777" className="hover:opacity-100">+97145120777</a>
-              </li>
-            </ul>
+
+          {/* Certifications & Awards */}
+          <div className="border-t border-white/20 mt-12 pt-8">
+            <div className="text-center">
+              <h4 className="font-bold text-lg">
+                Certifications & Standards
+              </h4>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="bg-white/10 px-4 py-2 rounded-full">
+                  ISO 9001:2015 Quality Management
+                </div>
+                <div className="bg-white/10 px-4 py-2 rounded-full">
+                  OHSAS 18001 Health & Safety
+                </div>
+                <div className="bg-white/10 px-4 py-2 rounded-full">
+                  ISO 14001 Environmental Management
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-gray-800 text-gray-400 text-center py-4">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Green Oasis General Contracting Co LLC. All Rights Reserved.</p>
+
+      {/* Copyright */}
+      <div className="bg-gray-900 text-gray-400 py-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-sm text-center sm:text-left">
+              &copy; {new Date().getFullYear()} Green Oasis General Contracting
+              Co LLC. All Rights Reserved.
+            </p>
+            <div className="flex space-x-6 text-sm">
+              <a
+                href="#"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Terms of Service
+              </a>
+              <a
+                href="#"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Sitemap
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
-};
+}
