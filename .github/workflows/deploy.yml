@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./react 
+        working-directory: ./tt 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

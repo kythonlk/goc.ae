@@ -1,7 +1,7 @@
-import { Menu, X } from "lucide-react";
-import Logo from "./assets/logo.jpeg";
 import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import CropedLogo from '../assets/logo.jpeg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
     },
     {
       path: '/about',
-      label: 'About Us',
+      label: 'About',
       subLinkStyle: '-ml-20',
       subLinks: [
         { path: '/about/mission-and-vision', label: 'Mission and Vision' },
@@ -35,8 +35,19 @@ export default function Navbar() {
       ]
     },
     {
-      path: '/services',
-      label: 'Services',
+      path: '/projects',
+      label: 'Projects',
+      subLinkStyle: '-ml-40',
+      subLinks: [
+        { path: '/services/soil', label: 'Infrastructures ' },
+        { path: '/services/piling', label: 'Pipelines' },
+        { path: '/services/shoring', label: 'Petrol Stations' },
+        { path: '/services/ndrc', label: 'Sub Stations' },
+      ]
+    },
+    {
+      path: '/opportunities',
+      label: 'Opportunities ',
       subLinkStyle: '-ml-40',
       subLinks: [
         { path: '/services/soil', label: 'Soil Improvement' },
@@ -46,10 +57,6 @@ export default function Navbar() {
         { path: '/services/dewatering', label: 'Dewatering' },
         { path: '/services/logistics', label: 'Logistics' },
       ]
-    },
-    {
-      path: '/opportunities',
-      label: 'Opportunities ',
     },
     {
       path: '/work-with-us',
@@ -83,13 +90,13 @@ export default function Navbar() {
       <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 sm:h-24 items-center">
           <Link to="/" className="flex items-center">
-            <img src={Logo} className="h-16 sm:h-20" alt="TerraCore Logo" />
+            <img src={CropedLogo} className="h-16 sm:h-20" alt="TerraCore Logo" />
             <div className="flex flex-col items-start pl-6">
               <span className="text-3xl font-bold text-gray-900">
-                TerraCore
+                GREEN OASIS
               </span>
               <span className="text-md text-gray-800">
-                Ground Engineering Solutions
+                GENERAL CONTRACTING
               </span>
             </div>
           </Link>
@@ -107,12 +114,12 @@ export default function Navbar() {
                   >
                     <Link
                       to={item.path}
-                      className={`${isActive ? "text-[#42b7ed]" : "text-gray-700"
-                        } hover:text-[#42b7ed] relative pb-1 transition-colors duration-200`}
+                      className={`${isActive ? "text-[#367239]" : "text-gray-700"
+                        } hover:text-[#367239] relative pb-1 transition-colors duration-200`}
                     >
                       {item.label}
                       {hasSubLinks && <span className="ml-1 text-sm">+</span>}
-                      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#42b7ed] transition-all duration-300 group-hover:w-full"></span>
+                      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#367239] transition-all duration-300 group-hover:w-full"></span>
                     </Link>
 
                     {item.subLinks && item.subLinks.length > 0 && (
@@ -123,7 +130,7 @@ export default function Navbar() {
                               <Link
                                 key={sub.path}
                                 to={sub.path}
-                                className="text-gray-700 hover:text-[#42b7ed] py-2 transition-colors duration-200 whitespace-nowrap"
+                                className="text-gray-700 hover:text-[#367239] py-2 transition-colors duration-200 whitespace-nowrap"
                               >
                                 {sub.label}
                               </Link>
