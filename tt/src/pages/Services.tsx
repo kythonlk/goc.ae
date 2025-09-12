@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import { services } from '../lib/services-const';
-import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
   return (
     <>
-      <Helmet>
-        <title>Services | TerraCore Ground Engineering Solutions</title>
-        <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
-      </Helmet>
+      <title>Services | TerraCore Ground Engineering Solutions</title>
+      <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
       <div className="relative -mb-18" id="services">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"

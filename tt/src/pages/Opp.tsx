@@ -3,7 +3,6 @@ import proc from '../assets/proc.webp';
 import sub from '../assets/sub.webp';
 import sc from '../assets/images/sc.webp';
 import pro from '../assets/images/pro.webp';
-import { Helmet } from 'react-helmet-async';
 
 export default function WorkWithUs() {
   const [selectedOpportunity, setSelectedOpportunity] = useState<any>(null);
@@ -27,10 +26,8 @@ export default function WorkWithUs() {
 
   return (
     <>
-      <Helmet>
-        <title>Opportunities | TerraCore Ground Engineering Solutions</title>
-        <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
-      </Helmet>
+      <title>Opportunities | TerraCore Ground Engineering Solutions</title>
+      <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
       <div className="bg-white min-h-screen">
         <div className="relative h-[60vh] bg-gray-900">
           <div className="absolute inset-0 bg-cover bg-center opacity-40"

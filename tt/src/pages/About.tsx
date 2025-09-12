@@ -1,13 +1,10 @@
-import { Helmet } from 'react-helmet-async';
 import AboutImage from '../assets/images/company.webp';
 
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>About Us | TerraCore Ground Engineering Solutions</title>
-        <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
-      </Helmet>
+      <title>About Us | TerraCore Ground Engineering Solutions</title>
+      <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
       <div className="bg-white">
         <div className="relative z-1">
           <h2 className="text-3xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold text-white text-left z-20 absolute top-40 left-20">

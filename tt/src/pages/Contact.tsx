@@ -1,14 +1,11 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
 export default function WorkWithUs() {
 
   return (
     <>
-      <Helmet>
-        <title>Contact US | TerraCore Ground Engineering Solutions</title>
-        <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
-      </Helmet>
+      <title>Contact US | TerraCore Ground Engineering Solutions</title>
+      <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
       <div className="bg-[#cfd0d0] min-h-screen">
         <div className="py-10 sm:py-20 bg-[#cfd0d0] text-gray-900" id="contact-form">
           <div className="mx-4 sm:mx-20 px-2 sm:px-6 lg:px-8">

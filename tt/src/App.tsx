@@ -18,18 +18,15 @@ import fb from './assets/fb.png';
 import ig from './assets/ig.png';
 import linkedin from './assets/in.png';
 import x from './assets/x.png';
-import { HelmetProvider } from 'react-helmet-async';
 import Subservices from './components/services/subservices';
 import { piling, soil, dewatering, shoring, ndrc } from './lib/services-const';
 import Logistics from './components/services/logistics';
 
 export default function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </HelmetProvider>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
