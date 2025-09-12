@@ -17,7 +17,6 @@ import fb from './assets/fb.png';
 import ig from './assets/ig.png';
 import linkedin from './assets/in.png';
 import x from './assets/x.png';
-import Logistics from './components/services/logistics';
 
 export default function App() {
   return (
@@ -56,7 +55,6 @@ function AppContent() {
           <Route path="/about/mission-and-vision" element={<Misson />} />
           <Route path="/about/hse-and-quality" element={<HSE />} />
           <Route path="/about/certification" element={<ISO />} />
-          <Route path="/services/logistics" element={<Logistics />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="/opportunities" element={<Opportunities />} />
