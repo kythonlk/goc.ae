@@ -59,7 +59,7 @@ export default function Affiliates() {
 
   const getVisibleCards = () => {
     const cards = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       const index = (currentIndex + i) % affiliates.length;
       cards.push(affiliates[index]);
     }
@@ -70,7 +70,7 @@ export default function Affiliates() {
     <div className="mx-20 p-6">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Affiliates</h2>
+        <h2 className="text-5xl font-bold text-gray-800 mb-4">Our Affiliates</h2>
         <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Green Oasis General Contracting Co. LLC has a diversified business group
           committed to excellence, innovation, and delivering high-quality solutions
@@ -94,9 +94,9 @@ export default function Affiliates() {
                   className="group flex-1 min-w-0 transition-all duration-300 relative overflow-hidden cursor-pointer"
                 >
                   <div className="text-center">
-                    <div className="text-center bg-gray-300 p-6 rounded-lg hover:rounded-b-none">
-                      <div className="bg-white">
-                        <img src={affiliate.logo} alt={affiliate.description} className="w-auto h-40 mx-auto -mx-20" />
+                    <div className="text-center bg-gray-300 py-4 rounded-lg hover:rounded-b-none">
+                      <div className="bg-white shadow-xl border border-gray-100">
+                        <img src={affiliate.logo} alt={affiliate.description} className="w-auto h-40 max-h-40 object-contain mx-auto" />
                       </div>
                     </div>
                     <div className="p-6 flex items-center bg-gray-300 rounded-b-lg justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 ">
@@ -122,4 +122,3 @@ export default function Affiliates() {
     </div>
   );
 };
-

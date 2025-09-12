@@ -1,39 +1,45 @@
-import { Building2, Bolt, Waypoints, Factory, Droplet, Truck } from "lucide-react";
 import { useState, useRef } from "react";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ci1 from "../assets/ci/ci1.webp";
+import ci2 from "../assets/ci/ci2.webp";
+import ci3 from "../assets/ci/ci3.webp";
+import ci4 from "../assets/ci/ci4.webp";
+import ci5 from "../assets/ci/ci5.webp";
+import ci6 from "../assets/ci/ci6.webp";
 
 const expertiseData = [
   {
-    icon: <Building2 className="h-12 w-12 text-green-600" />,
+    icon: ci1,
     title: "Civil Works",
     description:
       "The Civil Works Division is the oldest division of Green Oasis. It is involved in all civil aspects of the awarded projects and is the main division in charge of all phases of any project from beginning to end."
   },
   {
-    icon: <Bolt className="h-12 w-12 text-green-600" />,
+    icon: ci2,
     title: "MEP Works",
     description:
       "The Electromechanical Works Division is a major division within GOC consisting of a specialized in-house team in charge of Mechanical, Electrical and Plumbing works."
   },
   {
-    icon: <Waypoints className="h-12 w-12 text-green-600" />,
+    icon: ci3,
     title: "Infrastructure Works",
     description:
       "The Infrastructure Works Division consists of a team specialized in infrastructure projects ranging from power substations and water tanks to pipe laying and road works."
   },
   {
-    icon: <Factory className="h-12 w-12 text-green-600" />,
+    icon: ci4,
     title: "Industrial Works",
     description:
       "The Industrial Works Division handles complex construction projects for factories, warehouses, and specialized industrial facilities."
   },
   {
-    icon: <Droplet className="h-12 w-12 text-green-600" />,
+    icon: ci5,
     title: "Water & Dewatering",
     description:
       "Specialized in water management, dewatering solutions, and reservoir construction to ensure safe and efficient operations on all projects."
   },
   {
-    icon: <Truck className="h-12 w-12 text-green-600" />,
+    icon: ci6,
     title: "Logistics",
     description:
       "The Logistics Division supports projects with transportation, material handling, and supply chain management services."
@@ -67,11 +73,11 @@ export default function ExpertiseCarousel() {
           onClick={() => scroll("left")}
           className="absolute -left-6 top-1/3 -translate-y-1/2 text-7xl"
         >
-          ‹
+          <ChevronLeft className="w-20 h-20 text-gray-700" />
         </button>
         <div
           ref={carouselRef}
-          className="flex overflow-x-auto  gap-6 scroll-smooth h-60"
+          className="flex overflow-x-auto gap-6 scroll-smooth h-80"
           style={{ scrollBehavior: "smooth", scrollbarWidth: "none" }}
         >
           {expertiseData.map((item, index) => (
@@ -84,7 +90,7 @@ export default function ExpertiseCarousel() {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="min-w-[400px] bg-white shadow-2xl rounded-xl p-6  flex flex-col items-center"
               >
-                <div className="mb-4">{item.icon}</div>
+                <img src={item.icon} alt={item.title} className="w-32 h-32 object-cover object-center " />
                 <h3 className="text-lg font-semibold">{item.title}</h3>
 
               </div>
@@ -104,7 +110,7 @@ export default function ExpertiseCarousel() {
           onClick={() => scroll("right")}
           className="absolute -right-6 top-1/3 -translate-y-1/2 text-7xl"
         >
-          ›
+          <ChevronRight className="w-20 h-20 text-gray-700" />
         </button>
       </div>
     </section>
