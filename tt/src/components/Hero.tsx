@@ -68,21 +68,21 @@ export default function Hero() {
         />
       )}
 
-      <div className="relative h-full flex items-center justify-center">
+      <div className="relative h-full flex items-center justify-center px-4">
         <div
-          className={`max-w-3xl p-20 bg-white/20 rounded-4xl backdrop-blur-sm  flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
+          className={`max-w-3xl p-4 sm:p-8 md:p-12 lg:p-20 bg-white/20 rounded-4xl backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
             }`}
         >
-          <h1 className="text-4xl md:text-5xl mb-6 text-white whitespace-pre-line">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white whitespace-pre-line leading-tight">
             Building A Better <br />
             Future
           </h1>
-          <p className="text-xl text-white max-w-3xl py-6">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-3xl py-3 sm:py-4 md:py-6 px-2">
             Green Oasis General Contracting CO. LLC. is a flagship company of the Extra Co. Group that is dedicated and committed in providing the society with top quality infrastructure, commercial and residential project.
           </p>
           <Link
             to={slides[currentSlide].link}
-            className="font-bp bg-white py-3 px-8 rounded-full hover:bg-blue-700 transition min-w-40 text-center"
+            className="font-bp bg-white py-2 sm:py-3 px-6 sm:px-8 rounded-full hover:bg-blue-700 transition min-w-32 sm:min-w-40 text-center text-sm sm:text-base"
           >
             View our projects
           </Link>

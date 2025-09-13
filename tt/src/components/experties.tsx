@@ -52,7 +52,7 @@ export default function ExpertiseCarousel() {
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
-      const scrollAmount = 540;
+      const scrollAmount = window.innerWidth < 640 ? 280 : window.innerWidth < 768 ? 380 : 540;
       carouselRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -61,9 +61,9 @@ export default function ExpertiseCarousel() {
   };
 
   return (
-    <section className="p-20 text-center text-gray-900 bg-gray-200">
-      <h2 className="text-5xl font-bold mb-6">Our Expertise</h2>
-      <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+    <section className="p-4 sm:p-8 md:p-12 lg:p-20 text-center text-gray-900 bg-gray-200">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Our Expertise</h2>
+      <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-12 px-4">
         Green Oasis General Contracting CO. LLC. is a flagship company of the Extra Co. Group
         that is dedicated and committed in providing the society with top quality infrastructure,
         commercial and residential projects.
@@ -71,31 +71,30 @@ export default function ExpertiseCarousel() {
       <div className="relative">
         <button
           onClick={() => scroll("left")}
-          className="absolute -left-6 top-1/3 -translate-y-1/2 text-7xl"
+          className="absolute -left-2 sm:-left-6 top-1/3 -translate-y-1/2 z-10 p-1 sm:p-2 hidden sm:block"
         >
-          <ChevronLeft className="w-20 h-20 text-gray-700" />
+          <ChevronLeft className="w-6 h-6 sm:w-8 md:w-12 lg:w-20 sm:h-8 md:h-12 lg:h-20 text-gray-700" />
         </button>
         <div
           ref={carouselRef}
-          className="flex overflow-x-auto gap-6 scroll-smooth h-80"
+          className="flex overflow-x-auto gap-3 sm:gap-6 scroll-smooth h-80 pb-4"
           style={{ scrollBehavior: "smooth", scrollbarWidth: "none" }}
         >
           {expertiseData.map((item, index) => (
             <div
-              className="min-w-[540px] flex-shrink-0 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 p-2"
+              key={index}
+              className="min-w-[280px] sm:min-w-[380px] lg:min-w-[540px] flex-shrink-0 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 p-2"
             >
               <div
-                key={index}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="min-w-[400px] bg-white shadow-2xl rounded-xl p-6  flex flex-col items-center"
+                className="min-w-[240px] sm:min-w-[340px] lg:min-w-[400px] bg-white shadow-2xl rounded-xl p-4 sm:p-6 flex flex-col items-center"
               >
-                <img src={item.icon} alt={item.title} className="w-32 h-32 object-cover object-center " />
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-
+                <img src={item.icon} alt={item.title} className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 object-cover object-center" />
+                <h3 className="text-base sm:text-lg font-semibold mt-2">{item.title}</h3>
               </div>
               <p
-                className={`text-sm text-gray-600 min-w-[400px] mt-4 transition-all max-w-sm duration-500 ease-in-out ${hoveredIndex === index
+                className={`text-xs sm:text-sm text-gray-600 min-w-[240px] sm:min-w-[340px] lg:min-w-[400px] mt-4 transition-all max-w-sm duration-500 ease-in-out px-2 ${hoveredIndex === index
                   ? "max-h-40 opacity-100"
                   : "max-h-0 opacity-0 overflow-hidden"
                   }`}
@@ -108,9 +107,9 @@ export default function ExpertiseCarousel() {
 
         <button
           onClick={() => scroll("right")}
-          className="absolute -right-6 top-1/3 -translate-y-1/2 text-7xl"
+          className="absolute -right-2 sm:-right-6 top-1/3 -translate-y-1/2 z-10 p-1 sm:p-2 hidden sm:block"
         >
-          <ChevronRight className="w-20 h-20 text-gray-700" />
+          <ChevronRight className="w-6 h-6 sm:w-8 md:w-12 lg:w-20 sm:h-8 md:h-12 lg:h-20 text-gray-700" />
         </button>
       </div>
     </section>

@@ -38,11 +38,11 @@ import c36 from '../assets/c/c36.webp'
 
 const ClientLogo = ({ imageUrl, altText }: { imageUrl: string; altText: string }) => {
   return (
-    <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:scale-105 transition duration-300 ease-in-out filter grayscale hover:grayscale-0 ">
+    <div className="flex items-center justify-center p-2 sm:p-3 md:p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:scale-105 transition duration-300 ease-in-out filter grayscale hover:grayscale-0 aspect-square">
       <img
         src={imageUrl}
         alt={altText}
-        className="max-h-24 object-contain"
+        className="max-h-16 sm:max-h-24 w-full object-contain"
       />
     </div>
   );
@@ -89,13 +89,13 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section className="py-12 px-4 sm:mx-20">
-      <h2 className="text-5xl font-bold text-center mb-4 text-gray-900">Our Clients</h2>
-      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+    <section className="py-8 sm:py-12 px-4 sm:px-8 md:px-12 lg:px-20">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4 text-gray-900">Our Clients</h2>
+      <p className="text-sm sm:text-base text-center text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto px-4">
         Green Oasis General Contracting CO. LLC is proud to work with these outstanding companies.
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
         {clients.map(client => (
           <ClientLogo
             key={client.id}

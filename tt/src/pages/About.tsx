@@ -8,7 +8,7 @@ export default function About() {
       <div className="relative z-1">
         <img src={AboutImage} alt="bg" className="w-full h-[40em] object-cover object-bottom z-10 -scale-x-100" />
       </div>
-      <div className="p-20 grid grid-cols-5 gap-4 justify-center items-center">
+      <div className="p-4 sm:p-20 flex flex-col sm:grid sm:grid-cols-5 gap-4 justify-center items-center">
         <img src={a1} alt="bg" className="w-full h-[40em] object-contain col-span-2" />
         <div className="col-span-3 px-10 text-justify">
           <h1 className="text-5xl font-semibold mb-4">About Green Oasis</h1>
