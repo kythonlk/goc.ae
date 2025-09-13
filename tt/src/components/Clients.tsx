@@ -89,13 +89,13 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section className="py-12 px-4 mx-20">
+    <section className="py-12 px-4 sm:mx-20">
       <h2 className="text-5xl font-bold text-center mb-4 text-gray-900">Our Clients</h2>
       <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
         Green Oasis General Contracting CO. LLC is proud to work with these outstanding companies.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {clients.map(client => (
           <ClientLogo
             key={client.id}

@@ -48,7 +48,7 @@ function AppContent() {
       <ScrollToTop />
       <ScrollToHash />
       <SocialSidebar />
-      <main>
+      <main className='w-full overflow-x-hidden'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

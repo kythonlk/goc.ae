@@ -4,7 +4,7 @@ export default function WorkWithUs() {
 
   return (
     <>
-      <title>Contact US | TerraCore Ground Engineering Solutions</title>
+      <title>Contact US  | GREEN OASIS - GENERAL CONTRACTING</title>
       <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
       <div className="bg-[#cfd0d0] min-h-screen">
         <div className="py-10 sm:py-20 bg-[#cfd0d0] text-gray-900" id="contact-form">
@@ -38,7 +38,7 @@ export default function WorkWithUs() {
                       </div>
                       <div>
                         <p className="font-semibold">Email</p>
-                        <a className="font-bp" href="mailto:info@terracoreme.ae" target='_blank'>info@terracoreme.ae</a>
+                        <a className="font-bp" href="mailto:info@goc.ae" target='_blank'>info@goc.ae</a>
                       </div>
                     </div>
                     <div className="flex items-center">
@@ -54,7 +54,9 @@ export default function WorkWithUs() {
                 </div>
 
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.912230385254!2d55.1828602!3d25.0370525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d90eaeda877%3A0x4c62a29f983f549b!2sTerraCore!5e0!3m2!1sen!2sae!4v1743578389213!5m2!1sen!2sae" width="820" height="400" loading="lazy"></iframe>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.915347183015!2d55.18028677612656!3d25.036946738171483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6dce28555555%3A0x381294290dd0ffc!2sGreen%20Oasis%20General%20Cont.%20Co.%20L.L.C!5e0!3m2!1sen!2sae!4v1757753466844!5m2!1sen!2sae"
+                    width="820" height="400" loading="lazy"></iframe>
                 </div>
               </div>
             </div>

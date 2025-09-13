@@ -1,18 +1,23 @@
-import AboutImage from '../assets/images/company.webp';
+import AboutImage from '../assets/about.webp';
+import a1 from '../assets/a1.webp';
 
 export default function About() {
   return (
     <>
-      <title>About Us | TerraCore Ground Engineering Solutions</title>
-      <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
-      <div className="bg-white">
-        <div className="relative z-1">
-          <h2 className="text-3xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold text-white text-left z-20 absolute top-40 left-20">
-            About Us
-          </h2>
-          <img src={AboutImage} alt="bg" className="w-full h-[36em] object-cover object-top z-10 -scale-x-100" />
-          <p className="text-base sm:text-xl text-gray-900 mx-4 sm:mx-40 mb-4 sm:mb-10 pt-4 sm-pt-10 2xl:pt-16">
-            TerraCore is a full-service engineering contractor based in the UAE, specializing in comprehensive ground engineering solutions such as piling, soil improvement, shoring, dewatering, and Non-Disruptive Methods (NDM) With a team of highly experienced professionals and state-of-the-art equipment, we provide innovative, tailored solutions that meet the speciﬁc requirements of each project while ensuring safety, quality, and eﬃciency. By leveraging advanced technologies and industry best practices, TerraCore adopts a client-centric approach to deliver cost-eﬀective and sustainable solutions.
+      <title>About Us | GREEN OASIS - GENERAL CONTRACTING</title>
+      <div className="relative z-1">
+        <img src={AboutImage} alt="bg" className="w-full h-[40em] object-cover object-bottom z-10 -scale-x-100" />
+      </div>
+      <div className="p-20 grid grid-cols-5 gap-4 justify-center items-center">
+        <img src={a1} alt="bg" className="w-full h-[40em] object-contain col-span-2" />
+        <div className="col-span-3 px-10 text-justify">
+          <h1 className="text-5xl font-semibold mb-4">About Green Oasis</h1>
+          <p className="mb-4">
+            GOC is centric futuristic organization that believes in proactive advancement and development, which satiates esteemed clients. We at GOC, are committed for all its future endeavor, prestigious clients as well as staff and workers. Among the activities we have planned are workshops and Free education GOLD (Green Oasis Learning & Development)
+            which aims and gives opportunity to our workers for free education and to improve the physical, social and mental well-being, develop personality, improve skill level, an ability to read, write make them independent, confident. Education liberates their thoughts and actions, making them capable of wisely using the resources available and progressing gradually.
+          </p>
+          <p className="mb-4">
+            Our clients recognize our commitment to deliver the highest quality work on schedule and within budget.  In meeting these objectives, we consistently place our emphasis on health, safety and the environment, Green Oasis has been awarded Quality Management System certification and is certified by OHSAS for its Safety and Health Management System.  Stringent procedures are enforced at every step of every job as we continue our drive to improve performance and exceed client expectations.
           </p>
         </div>
       </div>

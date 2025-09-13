@@ -26,8 +26,7 @@ export default function WorkWithUs() {
 
   return (
     <>
-      <title>Opportunities | TerraCore Ground Engineering Solutions</title>
-      <meta name="description" content="Terracore is a ground engineering company that provides engineering solutions for the construction industry. We offer a wide range of services, including site surveys, soil testing, and foundation design. Our team of experienced engineers is dedicated to providing high-quality work that meets the needs of our clients." />
+      <title>Opportunities  | GREEN OASIS - GENERAL CONTRACTING</title>
       <div className="bg-white min-h-screen">
         <div className="relative h-[60vh] bg-gray-900">
           <div className="absolute inset-0 bg-cover bg-center opacity-40"

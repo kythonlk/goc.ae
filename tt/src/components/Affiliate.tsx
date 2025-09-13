@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Cl1 from '../assets/cl/cl1.webp';
-import Cl2 from '../assets/cl/cl2.webp';
+import Cl2 from '../assets/cl/cl2.png';
 import Cl3 from '../assets/cl/cl3.webp';
 import Cl4 from '../assets/cl/cl4.webp';
 import Cl5 from '../assets/cl/cl5.webp';
 import Cl6 from '../assets/cl/cl6.webp';
 import Cl7 from '../assets/cl/cl7.webp';
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Affiliates() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,7 +68,6 @@ export default function Affiliates() {
 
   return (
     <div className="mx-20 p-6">
-      {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold text-gray-800 mb-4">Our Affiliates</h2>
         <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -77,12 +76,11 @@ export default function Affiliates() {
           across multiple sectors. Our portfolio includes a range of specialized companies.
         </p>
       </div>
-
       <div className="relative mb-16">
         <div className="flex items-center">
           <button
             onClick={prevSlide}
-            className="p-3 rounded-full transition-all duration-200 z-10 mr-6 absolute top-6 -left-20"
+            className="p-3 rounded-full transition-all duration-200 z-10 mr-6 absolute top-12 -left-20"
           >
             <ChevronLeft className="w-20 h-20 text-gray-700" />
           </button>
@@ -94,9 +92,9 @@ export default function Affiliates() {
                   className="group flex-1 min-w-0 transition-all duration-300 relative overflow-hidden cursor-pointer"
                 >
                   <div className="text-center">
-                    <div className="text-center bg-gray-300 py-4 rounded-lg hover:rounded-b-none">
+                    <div className="text-center bg-gray-300 py-8 rounded-lg hover:rounded-b-none">
                       <div className="bg-white shadow-xl border border-gray-100">
-                        <img src={affiliate.logo} alt={affiliate.description} className="w-auto h-40 max-h-40 object-contain mx-auto" />
+                        <img src={affiliate.logo} alt={affiliate.description} className="w-auto h-40 max-h-40 object-contain mx-auto p-4" />
                       </div>
                     </div>
                     <div className="p-6 flex items-center bg-gray-300 rounded-b-lg justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 ">
@@ -111,7 +109,7 @@ export default function Affiliates() {
           </div>
           <button
             onClick={nextSlide}
-            className="p-3 rounded-full transition-all duration-200 z-10 ml-6 absolute top-6 -right-20"
+            className="p-3 rounded-full transition-all duration-200 z-10 ml-6 absolute top-12 -right-20"
           >
             <ChevronRight className="w-20 h-20 text-gray-700" />
           </button>
