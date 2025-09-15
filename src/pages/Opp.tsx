@@ -36,7 +36,7 @@ export default function WorkWithUs() {
   return (
     <>
       <title>Opportunities  | GREEN OASIS - GENERAL CONTRACTING</title>
-      <div className="bg-white min-h-screen">
+      <div className="bg-white">
         <div className="relative h-[28vh] bg-gray-900" style={{ backgroundImage: `url(${bg})` }}>
           <div className="relative h-full flex items-end justify-center text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-10">{selectedOpportunity ? selectedOpportunity.title : 'Opportunities'}</h1>
