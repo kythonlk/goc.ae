@@ -26,10 +26,10 @@ export default function Navbar() {
     {
       path: '/about',
       label: 'About',
-      subLinkStyle: '-ml-20',
+      subLinkStyle: '',
       subLinks: [
         { path: '/about/mission-and-vision', label: 'Mission and Vision' },
-        { path: '/about/hse-and-quality', label: 'HSE' },
+        { path: '/about/hse-and-quality', label: 'HSE and Quality' },
         { path: '/about/certification', label: 'Certification' },
         { path: '/news', label: 'News' }
       ]
@@ -37,25 +37,21 @@ export default function Navbar() {
     {
       path: '/projects',
       label: 'Projects',
-      subLinkStyle: '-ml-40',
+      subLinkStyle: '',
       subLinks: [
-        { path: '/services/soil', label: 'Infrastructures ' },
-        { path: '/services/piling', label: 'Pipelines' },
-        { path: '/services/shoring', label: 'Petrol Stations' },
-        { path: '/services/ndrc', label: 'Sub Stations' },
+        { path: '/projects/infrastructure', label: 'Infrastructure' },
+        { path: '/projects/pipeline', label: 'Pipeline' },
+        { path: '/projects/petrol-stations', label: 'Petrol Stations' },
+        { path: '/projects/sub-stations', label: 'Sub Stations' }
       ]
     },
     {
       path: '/opportunities',
       label: 'Opportunities ',
-      subLinkStyle: '-ml-40',
+      subLinkStyle: '',
       subLinks: [
-        { path: '/services/soil', label: 'Soil Improvement' },
-        { path: '/services/piling', label: 'Piling' },
-        { path: '/services/shoring', label: 'Shoring' },
-        { path: '/services/ndrc', label: 'NDRC/NDM' },
-        { path: '/services/dewatering', label: 'Dewatering' },
-        { path: '/services/logistics', label: 'Logistics' },
+        { path: '/opportunities/careers', label: 'Careers' },
+        { path: '/opportunities', label: 'Subcontractors and Suppliers' },
       ]
     },
     {
@@ -85,8 +81,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50 ${isSubMenuOpen ? "pb-6" : ""
-      }`}>
+    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50 `}>
       <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 sm:h-24 items-center">
           <Link to="/" className="flex items-center">
@@ -123,19 +118,17 @@ export default function Navbar() {
                     </Link>
 
                     {item.subLinks && item.subLinks.length > 0 && (
-                      <div className={`${item.subLinkStyle} invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 right-0 top-full w-full z-10 transition-all duration-300`}>
-                        <div className="py-4">
-                          <div className="flex gap-6">
-                            {item.subLinks.map((sub) => (
-                              <Link
-                                key={sub.path}
-                                to={sub.path}
-                                className="text-gray-700 hover:text-[#367239] py-2 transition-colors duration-200 whitespace-nowrap"
-                              >
-                                {sub.label}
-                              </Link>
-                            ))}
-                          </div>
+                      <div className={`${item.subLinkStyle} ${isSubMenuOpen ? "bg-white/90" : ""} invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-10 w-80 z-10 transition-all duration-300`}>
+                        <div className="flex flex-col px-2">
+                          {item.subLinks.map((sub) => (
+                            <Link
+                              key={sub.path}
+                              to={sub.path}
+                              className="text-gray-700 hover:text-[#367239] py-2 transition-colors duration-200 whitespace-nowrap"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
                         </div>
                       </div>
                     )}

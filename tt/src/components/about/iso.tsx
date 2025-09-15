@@ -1,7 +1,7 @@
 import iso1 from '../../assets/about/iso-1.webp';
 import iso2 from '../../assets/about/iso-2.webp';
 import iso3 from '../../assets/about/iso-3.webp';
-import bgServices from '../../assets/about/bg.png';
+import bgServices from '../../assets/s2.webp';
 
 const certifications = [
   {
@@ -23,13 +23,13 @@ const certifications = [
 
 export default function Iso() {
   return (
-    <div className="pt-20 sm:pt-28 min-h-[100vh] mx-w-full">
-      <div className="relative py-8 pb-8 sm:py-32" id="certification">
+    <div className="min-h-[60vh]">
+      <div className="relative py-8 pb-4 sm:py-40" id="certification">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-1">
           <img src={bgServices} alt="bg-services" className="w-full h-[150px] sm:h-[300px] object-cover object-bottom" />
         </div>
         <div className="mx-4 sm:mx-40 relative z-10 px-4">
-          <h2 className="text-2xl sm:text-5xl font-bold text-white text-start mb-6">
+          <h2 className="text-2xl sm:text-5xl font-bold text-white text-center">
             ISO CERTIFICATES
           </h2>
         </div>

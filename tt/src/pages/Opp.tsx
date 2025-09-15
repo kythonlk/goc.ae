@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import proc from '../assets/proc.webp';
-import sub from '../assets/sub.webp';
 import sc from '../assets/images/sc.webp';
 import pro from '../assets/images/pro.webp';
+import bg from '../assets/s2.webp';
+import o1 from '../assets/opp/o1.webp';
+import o2 from '../assets/opp/o2.webp';
+import o3 from '../assets/opp/o3.webp';
 
 export default function WorkWithUs() {
   const [selectedOpportunity, setSelectedOpportunity] = useState<any>(null);
@@ -13,14 +15,21 @@ export default function WorkWithUs() {
       description: "Planning, coordination, communication, cost management, strategic alignment, and supplier relationship management.",
       coverimage: pro,
       form: "pro",
-      image: proc
+      image: o1
     },
     subcontractor: {
       title: "Sub - Contractor",
       description: "Our supply chain is vital for every project. We screen all suppliers to ensure high-quality services and only work with trusted companies.",
       coverimage: sc,
       form: "sc",
-      image: sub
+      image: o2
+    },
+    project: {
+      title: "Logistics",
+      description: "Timely, high-quality delivery. Reduce costs, Increase efficiency, and improve client satisfaction.",
+      coverimage: pro,
+      form: "pro",
+      image: o3
     }
   };
 
@@ -28,14 +37,9 @@ export default function WorkWithUs() {
     <>
       <title>Opportunities  | GREEN OASIS - GENERAL CONTRACTING</title>
       <div className="bg-white min-h-screen">
-        <div className="relative h-[60vh] bg-gray-900">
-          <div className="absolute inset-0 bg-cover bg-center opacity-40"
-            style={{ backgroundImage: 'url("/home-2.webp")' }}
-          />
-          <div className="relative h-full flex items-center justify-center text-center">
-            <div className="max-w-4xl mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{selectedOpportunity ? selectedOpportunity.title : 'Opportunities'}</h1>
-            </div>
+        <div className="relative h-[28vh] bg-gray-900" style={{ backgroundImage: `url(${bg})` }}>
+          <div className="relative h-full flex items-end justify-center text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-10">{selectedOpportunity ? selectedOpportunity.title : 'Opportunities'}</h1>
           </div>
         </div>
 
@@ -57,16 +61,13 @@ export default function WorkWithUs() {
           ) : (
             <div className="m-4 sm:m-10 2xl:m-20 flex flex-col sm:flex-row items-center justify-around gap-4">
               {Object.entries(opportunities).map(([key, opp]: any) => (
-                <div key={key} className="bg-white p-8 rounded-lg shadow-lg flex flex-col items-center justify-center border border-gray-900/10">
-                  <img src={opp.image} alt={opp.title} className="w-20 h-20 object-cover bg-bp rounded-lg" />
-                  <h4 className="text-2xl font-semibold text-gray-900 my-4">{opp.title}</h4>
-                  <p className="text-gray-700 py-2 text-center">{opp.description}</p>
-                  <button
-                    onClick={() => setSelectedOpportunity(opp)}
-                    className="bg-bp text-white py-2 px-6 rounded-md hover:bg-blue-700 transition min-w-40 text-center"
-                  >
-                    Click Here
-                  </button>
+                <div className='w-96 mx-auto'>
+                  <div key={key} className="bg-white shadow-2xl flex flex-col items-center justify-center border border-gray-900/10"
+                    onClick={() => setSelectedOpportunity(opp)}>
+                    <img src={opp.image} alt={opp.title} className="w-28 h-auto object-cover" />
+                    <h4 className="text-2xl font-bp my-4">{opp.title}</h4>
+                  </div>
+                  <p className="text-gray-600 text-center mt-6">{opp.description}</p>
                 </div>
               ))}
             </div>
