@@ -1,28 +1,6 @@
 
 export default function WorkWithUs() {
 
-  const jobs: any = [
-    // {
-    //   title: 'Civil Engineer',
-    //   description: 'We are looking for an experienced civil engineer specializing in foundation works.',
-    //   apply: 'Apply Now'
-    // },
-    // {
-    //   title: 'Structural Engineer',
-    //   description: 'We are looking for an experienced structural engineer specializing in foundation works.',
-    //   apply: 'Apply Now'
-    // },
-    // {
-    //   title: 'Project Manager',
-    //   description: 'We are looking for an experienced project manager specializing in foundation works.',
-    //   apply: 'Apply Now'
-    // },
-    // {
-    //   title: 'Project Coordinator',
-    //   description: 'We are looking for an experienced project coordinator specializing in foundation works.',
-    //   apply: 'Apply Now'
-    // }
-  ];
   return (
     <>
       <title>Work With Us | GREEN OASIS - GENERAL CONTRACTING</title>
@@ -35,35 +13,17 @@ export default function WorkWithUs() {
           />
           <div className="relative h-full flex items-center justify-center text-center">
             <div className="max-w-4xl mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Work With Us</h1>
-              <p className="text-xl text-white">
-                Join Terracore Piling & Foundation Specialists and be part of a leading engineering team in the UAE.
-              </p>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Vacancies</h1>
             </div>
           </div>
         </div>
         <div className="p-4 sm:p-20">
-          <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Current Openings</h2>
-            <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-              {jobs.length > 0 ? (jobs.map((job: any) => (
-                <div key={job.title} className="bg-white p-6 rounded-lg shadow-lg">
-                  <h3 className="text-xl font-bold text-[#005aa6]">{job.title}</h3>
-                  <p className="text-gray-700 mt-2">{job.description}</p>
-                  <button className="mt-4 bg-[#44b6ec] text-white px-6 py-2 rounded-lg hover:bg-[#005aa6] transition">
-                    Apply Now
-                  </button>
-                </div>
-              ))) : (
-                <div className="bg-white p-6 rounded-lg shadow-lg">
-                  <h3 className="text-xl font-bold text-[#005aa6]">No Openings Currently</h3>
-                </div>
-              )}
-            </div>
-          </div>
 
+          <p className="text-gray-700 my-4">
+            If you are interested to apply with us you may submit your application.
+          </p>
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Apply Now</h2>
+            {/* <h2 className="text-2xl font-semibold text-[#005aa6] mb-6">Apply Now</h2> */}
             <iframe src="https://extraco-mailer.vercel.app/terracore/cv" width="100%" className='w-full h-[580px]' ></iframe>
           </div>
         </div>

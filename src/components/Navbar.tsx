@@ -31,7 +31,6 @@ export default function Navbar() {
         { path: '/about/mission-and-vision', label: 'Mission and Vision' },
         { path: '/about/hse-and-quality', label: 'HSE and Quality' },
         { path: '/about/certification', label: 'Certification' },
-        { path: '/news', label: 'News' }
       ]
     },
     {
@@ -81,16 +80,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/70'} shadow-lg fixed w-full z-50 `}>
+    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/10'} shadow-lg fixed w-full z-50 `}>
       <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 sm:h-24 items-center">
           <Link to="/" className="flex items-center">
-            <img src={CropedLogo} className="h-16 sm:h-20" alt="TerraCore Logo" />
+            <img src={CropedLogo} className="h-10 sm:h-14" alt="TerraCore Logo" />
             <div className="flex flex-col items-start pl-6">
-              <span className="text-3xl font-bold text-gray-900">
+              <span className="text-xl font-bold text-gray-900">
                 GREEN OASIS
               </span>
-              <span className="text-md text-gray-800">
+              <span className="text-base text-gray-800">
                 GENERAL CONTRACTING
               </span>
             </div>

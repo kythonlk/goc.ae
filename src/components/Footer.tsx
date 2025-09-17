@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="mx-20 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-gray-700">
           <div>
-            <img src={Logo} alt="Logo" className="w-32 mb-4" />
+            <img src={Logo} alt="Logo" className="w-20 mb-4" />
             <p >
               Over 40 years of trusted excellence in civil engineering, built on quality, safety, and sustainability.
             </p>

@@ -105,20 +105,19 @@ function AppContent() {
   );
 }
 
-
 function SocialSidebar() {
   return (
     <div className="fixed left-0 top-2/5 z-50 flex flex-col space-y-2">
-      <a href="https://facebook.com/people/TerraCore/61573495764602" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/GOC.UAE" target="_blank" rel="noopener noreferrer">
         <img src={fb} alt="Facebook" className="w-10 h-10 opacity-75" />
       </a>
       <a href="https://x.com/TerraCoreme" target="_blank" rel="noopener noreferrer">
         <img src={x} alt="Twitter" className="w-10 h-10 opacity-75" />
       </a>
-      <a href="https://www.instagram.com/terracoreme.ae/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/goc_uae/" target="_blank" rel="noopener noreferrer">
         <img src={ig} alt="Instagram" className="w-10 h-10 opacity-75" />
       </a>
-      <a href="https://linkedin.com/company/terracore-ae" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/company/goc-uae" target="_blank" rel="noopener noreferrer">
         <img src={linkedin} alt="LinkedIn" className="w-10 h-10 opacity-75" />
       </a>
     </div>

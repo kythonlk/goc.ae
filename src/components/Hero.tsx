@@ -54,7 +54,9 @@ export default function Hero() {
         className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'
           }`}
         style={{
-          backgroundImage: `url(${slides[currentSlide].image})`
+          backgroundImage: `url(${slides[currentSlide].image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       />
 

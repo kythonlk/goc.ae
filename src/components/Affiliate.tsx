@@ -15,36 +15,43 @@ export default function Affiliates() {
     {
       id: 1,
       logo: Cl1,
-      description: "Extra Co is leading industrial organization offering comprehensive solutions across multiple sectors. Our expertise includes construction, manufacturing, and industrial services with modern technology and professional excellence."
+      description: "Extra Co is leading industrial organization offering comprehensive solutions across multiple sectors. Our expertise includes construction, manufacturing, and industrial services with modern technology and professional excellence.",
+      link: "https://extraco.ae"
     },
     {
       id: 2,
       logo: Cl2,
+      link: "https://extraco.ae",
       description: "Extra Co is a leading organization offering innovative solutions across various sectors. We provide comprehensive industrial and commercial services with advanced technology solutions."
     },
     {
       id: 3,
       logo: Cl3,
+      link: "https://albadr.ae",
       description: "Al Badr delivers exceptional construction and consulting services. Our team provides innovative solutions with superior quality and professional excellence across multiple industrial sectors."
     },
     {
       id: 4,
       logo: Cl4,
+      link: "https://fixperts.ae",
       description: "Fixperts is a leading provider for engineering solutions. Professional electrical experts specialize in delivering quality solutions and expert maintenance services."
     },
     {
       id: 5,
       logo: Cl5,
+      link: "https://fixperts.shop",
       description: "Fixperts Group your leading partner for industrial solutions. Comprehensive industrial solutions including construction, maintenance and technical expertise."
     },
     {
       id: 6,
       logo: Cl6,
+      link: "https://freshliving.ae",
       description: "Fixperts Front Facing offering expert solutions across multiple industrial sectors. Specialized technical services for modern industrial requirements."
     },
     {
       id: 7,
       logo: Cl7,
+      link: "https://terracoreme.ae",
       description: "TerraCore offers comprehensive construction and infrastructure solutions. Leading provider of engineering services with advanced technology and expertise."
     }
   ];
@@ -92,16 +99,21 @@ export default function Affiliates() {
                   key={`${affiliate.id}-${currentIndex}-${index}`}
                   className="group flex-1 min-w-0 transition-all duration-300 relative overflow-hidden cursor-pointer"
                 >
-                  <div className="text-center">
+                  <div className="text-justify">
                     <div className="text-center bg-gray-300 py-4 sm:py-6 md:py-8 rounded-lg hover:rounded-b-none">
                       <div className="bg-white shadow-xl border border-gray-100">
                         <img src={affiliate.logo} alt={affiliate.description} className="w-auto h-24 sm:h-32 md:h-36 lg:h-40 max-h-24 sm:max-h-32 md:max-h-36 lg:max-h-40 object-contain mx-auto p-2 sm:p-4" />
                       </div>
                     </div>
-                    <div className="p-3 sm:p-4 md:p-6 flex items-center bg-gray-300 rounded-b-lg justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0">
+                    <div className="p-3 sm:p-4 md:p-6 flex flex-col items-center bg-gray-300 rounded-b-lg justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0">
                       <p className="text-xs sm:text-sm text-gray-600 leading-relaxed text-center">
                         {affiliate.description}
                       </p>
+                      <a href={affiliate.link} target="_blank" rel="noopener noreferrer">
+                        <p className="text-xs sm:text-sm text-gray-600 px-4 py-2 my-2 rounded-full bg-white text-center">
+                          Check Website
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -116,7 +128,6 @@ export default function Affiliates() {
           </button>
         </div>
 
-        {/* Mobile navigation dots */}
         <div className="flex justify-center mt-4 sm:hidden space-x-2">
           {affiliates.map((_, index) => (
             <button

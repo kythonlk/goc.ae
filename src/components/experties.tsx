@@ -88,13 +88,13 @@ export default function ExpertiseCarousel() {
               <div
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="min-w-[240px] sm:min-w-[340px] lg:min-w-[400px] bg-white shadow-2xl rounded-xl p-4 sm:p-6 flex flex-col items-center"
+                className="min-w-[240px] sm:min-w-[340px] lg:min-w-[400px] bg-white shadow-2xl p-4 sm:p-6 flex flex-col items-center"
               >
                 <img src={item.icon} alt={item.title} className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 object-cover object-center" />
-                <h3 className="text-base sm:text-lg font-semibold mt-2">{item.title}</h3>
+                <h3 className="text-md sm:text-lg font-semibold mt-2">{item.title}</h3>
               </div>
               <p
-                className={`text-xs sm:text-sm text-gray-600 min-w-[240px] sm:min-w-[340px] lg:min-w-[400px] mt-4 transition-all max-w-sm duration-500 ease-in-out px-2 ${hoveredIndex === index
+                className={`text-xs sm:text-sm text-justify text-gray-600 min-w-[240px] sm:min-w-[340px] lg:min-w-[400px] mt-4 transition-all max-w-sm duration-500 ease-in-out px-2 ${hoveredIndex === index
                   ? "max-h-40 opacity-100"
                   : "max-h-0 opacity-0 overflow-hidden"
                   }`}
