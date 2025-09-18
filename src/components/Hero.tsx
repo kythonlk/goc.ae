@@ -72,7 +72,7 @@ export default function Hero() {
 
       <div className="relative h-full flex items-center justify-center px-4">
         <div
-          className={`max-w-3xl p-4 sm:p-8 md:p-12 lg:p-20 bg-white/20 rounded-4xl backdrop-blur-sm flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
+          className={`max-w-3xl p-4 sm:p-8 md:p-12 lg:p-20 rounded-4xl  flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
             }`}
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white whitespace-pre-line leading-tight">
@@ -84,7 +84,7 @@ export default function Hero() {
           </p>
           <Link
             to={slides[currentSlide].link}
-            className="font-bp bg-white py-2 sm:py-3 px-6 sm:px-8 rounded-full hover:bg-blue-700 transition min-w-32 sm:min-w-40 text-center text-sm sm:text-base"
+            className="font-bp bg-white py-2 sm:py-3 px-6 sm:px-8 rounded-full hover:bg-green-100 transition min-w-32 sm:min-w-40 text-center text-sm sm:text-base"
           >
             View our projects
           </Link>

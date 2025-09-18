@@ -56,12 +56,12 @@ export default function Projects() {
                 <Link
                   key={p.name}
                   to={p.link}
-                  className='border border-gray-400 shadow-xl mx-auto w-80 flex flex-col justify-center items-center '
+                  className='shadow-2xl mx-auto w-80 flex flex-col justify-center items-center '
                 >
                   <div className="p-4">
                     <img src={p.image} alt={p.name} className="w-auto h-28 object-contain" />
                   </div>
-                  <p className="font-bp py-4 text-center">{p.name}</p>
+                  <p className="font-bp py-4 text-center font-semibold">{p.name}</p>
                 </Link>
                 <Plus className="text-gray-700 text-8xl mt-6" />
               </div>

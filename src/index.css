@@ -89,3 +89,69 @@
     transform: translateY(0);
   }
 }
+
+.pulsing-marker {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.pulsing-marker .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #3d8b40;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.pulsing-marker .pulse {
+  width: 12px;
+  height: 12px;
+  background-color: #3d8b40;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-animation: pulse-animation 2.5s infinite;
+  animation: pulse-animation 2.5s infinite;
+}
+
+.pulsing-marker .pulse-delay {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+
+
+@-webkit-keyframes pulse-animation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    -webkit-transform: scale(5);
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    -webkit-transform: scale(5);
+    transform: scale(5);
+    opacity: 0;
+  }
+}

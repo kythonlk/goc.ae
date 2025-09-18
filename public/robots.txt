@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://terracoreme.ae/sitemap.xml
+Sitemap: https://goc.ae/sitemap.xml

@@ -2,50 +2,65 @@
 <urlset
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
-	<url>
-		<loc>https://terracoreme.ae/</loc>
-		<priority>1.0</priority>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/about</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/about/mission-and-vision</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/about/hse-and-quality</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/about/certification</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/contact</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/work-with-us</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/opportunities</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services/soil</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services/piling</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services/shoring</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services/ndrc</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services/dewatering</loc>
-	</url>
-	<url>
-		<loc>https://terracoreme.ae/services/logistics</loc>
-	</url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://goc.ae/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/about</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/projects</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/careers</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- "About" Sub-Pages -->
+  <url>
+    <loc>https://goc.ae/about/mission-and-vision</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/about/hse-and-quality</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- "Careers" Sub-Pages -->
+  <url>
+    <loc>https://goc.ae/work-with-us</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/opportunities</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Dynamic Project Pages -->
+  <url>
+    <loc>https://goc.ae/projects/infrastructure</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/projects/pipeline</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/projects/petrol-stations</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goc.ae/projects/sub-stations</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

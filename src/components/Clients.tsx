@@ -109,7 +109,7 @@ function ClientsRow({ clients }: { clients: any }) {
   );
 
   return (
-    <div className="overflow-hidden py-4" ref={emblaRef}>
+    <div className="overflow-hidden p-4 py-10" ref={emblaRef}>
       <div className="flex">
         {clients.map((client: any) => (
           <div
@@ -128,8 +128,8 @@ export default function ClientsSection() {
   const clientChunks = chunkArray(clients, 12);
 
   return (
-    <section className="py-8 sm:py-20 px-4 sm:px-8 md:px-12 lg:px-20">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4 text-gray-900">
+    <section className="py-8 sm:py-20 px-4 sm:px-20">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4  text-green-800">
         Our Clients
       </h2>
       <p className="text-sm sm:text-base text-center text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto px-4">

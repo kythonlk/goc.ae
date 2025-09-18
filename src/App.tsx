@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-import Landing from './components/Landing';
+// import Landing from './components/Landing';
 import WorkWithUs from './pages/Work-With-Us';
 import Opportunities from './pages/Opp';
 import NotFound from './pages/404';
@@ -15,10 +15,10 @@ import HSE from './components/about/hse';
 import Projects from './pages/Projects';
 import SingleProject from './pages/SingleProject';
 import { ScrollToTop, ScrollToHash } from "./lib/Scrall";
-import fb from './assets/fb.png';
-import ig from './assets/ig.png';
-import linkedin from './assets/in.png';
-import x from './assets/x.png';
+import fb from './assets/fb.webp';
+import ig from './assets/ig.webp';
+import linkedin from './assets/in.webp';
+import x from './assets/x.webp';
 import Careers from './pages/Careers';
 
 export default function App() {
@@ -62,21 +62,7 @@ const projects = [
 
 
 function AppContent() {
-  const [showLanding, setShowLanding] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setFadeOut(true), 400);
-    const removeTimer = setTimeout(() => setShowLanding(false), 600);
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(removeTimer);
-    };
-  }, []);
-
-  return showLanding ? (
-    <Landing fadeOut={fadeOut} />
-  ) : (
+  return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <ScrollToTop />
@@ -96,7 +82,7 @@ function AppContent() {
           {projects.map((project, index) => (
             <Route key={index} path={project.link} element={<SingleProject name={project.name} disc={project.disc} images={project.imgaes} />} />
           ))}
-          <Route path="/opportunities/careers" element={<Careers />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
@@ -108,17 +94,17 @@ function AppContent() {
 function SocialSidebar() {
   return (
     <div className="fixed left-0 top-2/5 z-50 flex flex-col space-y-2">
-      <a href="https://www.facebook.com/GOC.UAE" target="_blank" rel="noopener noreferrer">
-        <img src={fb} alt="Facebook" className="w-10 h-10 opacity-75" />
+      <a href="https://www.facebook.com/GOC.UAE" target="_blank" rel="noopener noreferrer" className='w-12 h-12 bg-black flex justify-center items-center'>
+        <img src={fb} alt="Facebook" className="w-8 h-auto" />
       </a>
-      <a href="https://x.com/TerraCoreme" target="_blank" rel="noopener noreferrer">
-        <img src={x} alt="Twitter" className="w-10 h-10 opacity-75" />
+      <a href="https://x.com/GOC_UAE" target="_blank" rel="noopener noreferrer" className='w-12 h-12 bg-black flex justify-center items-center'>
+        <img src={x} alt="Twitter" className="w-8 h-auto" />
       </a>
-      <a href="https://www.instagram.com/goc_uae/" target="_blank" rel="noopener noreferrer">
-        <img src={ig} alt="Instagram" className="w-10 h-10 opacity-75" />
+      <a href="https://www.instagram.com/goc_uae/" target="_blank" rel="noopener noreferrer" className='w-12 h-12 bg-black flex justify-center items-center'>
+        <img src={ig} alt="Instagram" className="w-8 h-auto" />
       </a>
-      <a href="https://www.linkedin.com/company/goc-uae" target="_blank" rel="noopener noreferrer">
-        <img src={linkedin} alt="LinkedIn" className="w-10 h-10 opacity-75" />
+      <a href="https://www.linkedin.com/company/goc-uae" target="_blank" rel="noopener noreferrer" className='w-12 h-12 bg-black flex justify-center items-center'>
+        <img src={linkedin} alt="LinkedIn" className="w-8 h-auto" />
       </a>
     </div>
   );

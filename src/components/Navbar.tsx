@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import CropedLogo from '../assets/logo.jpeg';
+import CropedLogo from '../assets/logo.webp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +28,8 @@ export default function Navbar() {
       label: 'About',
       subLinkStyle: '',
       subLinks: [
-        { path: '/about/mission-and-vision', label: 'Mission and Vision' },
-        { path: '/about/hse-and-quality', label: 'HSE and Quality' },
-        { path: '/about/certification', label: 'Certification' },
+        { path: '/about#mission-and-vision', label: 'Mission and Vision' },
+        { path: '/about#hse-and-quality', label: 'HSE and Quality' },
       ]
     },
     {
@@ -47,15 +46,13 @@ export default function Navbar() {
     {
       path: '/opportunities',
       label: 'Opportunities ',
-      subLinkStyle: '',
-      subLinks: [
-        { path: '/opportunities/careers', label: 'Careers' },
-        { path: '/opportunities', label: 'Subcontractors and Suppliers' },
-      ]
     },
     {
       path: '/work-with-us',
       label: 'Work With Us',
+      subLinks: [
+        { path: '/careers', label: 'Careers' },
+      ]
     },
     {
       path: '/contact',
@@ -80,12 +77,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/10'} shadow-lg fixed w-full z-50 `}>
-      <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 sm:h-24 items-center">
+    <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-white/80'} shadow-lg fixed w-full z-50 `}>
+      <div className="mx-4 md:mx-8 xl:mx-20 px-4 sm:px-4">
+        <div className="flex justify-between h-16  items-center">
           <Link to="/" className="flex items-center">
             <img src={CropedLogo} className="h-10 sm:h-14" alt="TerraCore Logo" />
-            <div className="flex flex-col items-start pl-6">
+            <div className="flex flex-col items-start pl-2">
               <span className="text-xl font-bold text-gray-900">
                 GREEN OASIS
               </span>
