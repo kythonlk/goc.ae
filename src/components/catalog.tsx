@@ -13,7 +13,7 @@ export default function Catalog() {
 
   return (
     <section className="px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-8 md:py-10 text-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 justify-center items-center mx-28">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 justify-center items-center px-8 sm:mx-28">
         <div className="bg-gray-300 p-4 w-full max-w-80 mx-auto order-2 md:order-1">
           <button
             onClick={handleDownload}

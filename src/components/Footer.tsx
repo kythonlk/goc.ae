@@ -20,8 +20,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-bp text-gray-800 py-12" style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundPosition: 'center', backgroundRepeat: "no-repeat" }}>
-      <div className="mx-20 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-gray-700">
+      <div className="sm:mx-20 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-700">
           <div>
             <img src={Logo} alt="Logo" className="w-20 mb-4" />
             <p >

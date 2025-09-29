@@ -5,7 +5,7 @@ export default function Map() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center p-4 sm:p-8 md:p-12 lg:p-20"
+      className="relative min-h-[40vh] sm:min-h-screen flex items-center justify-center p-4 sm:p-8 md:p-12 lg:p-20"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",

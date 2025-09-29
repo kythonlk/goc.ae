@@ -101,7 +101,7 @@ export default function Affiliates() {
   return (
     <div className="px-4 sm:px-8 lg:px-32 p-4 sm:p-10 bg-gray-100">
       <div className="text-center mb-8 sm:mb-20">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-3 sm:mb-8">
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-green-800 mb-3 sm:mb-8">
           Our Affiliates
         </h2>
         <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -122,7 +122,7 @@ export default function Affiliates() {
             {affiliates.map((affiliate) => (
               <div
                 key={affiliate.id}
-                className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33%] lg:flex-[0_0_20%] px-10"
+                className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33%] xl:flex-[0_0_20%] px-10"
               >
                 <div className="group flex flex-col transition-all duration-300 relative overflow-hidden cursor-pointer h-full">
                   <div className="text-justify bg-gray-300 rounded-xl flex flex-col  h-full">

@@ -80,7 +80,7 @@ const clients = [
 
 const ClientLogo = ({ imageUrl, altText }: { imageUrl: string; altText: string }) => {
   return (
-    <div className="flex items-center justify-center h-60 sm:max-h-60 px-4 mx-4 bg-white shadow-xl border border-gray-100 hover:scale-105 transition duration-300 ease-in-out filter grayscale hover:grayscale-0">
+    <div className="flex items-center justify-center h-40 sm:h-60 sm:max-h-60 px-2 sm:px-4 sm:mx-4 bg-white shadow-xl border border-gray-100 hover:scale-105 transition duration-300 ease-in-out filter grayscale hover:grayscale-0">
       <img
         src={imageUrl}
         alt={altText}
@@ -109,7 +109,7 @@ function ClientsRow({ clients }: { clients: any }) {
   );
 
   return (
-    <div className="overflow-hidden p-4 py-10" ref={emblaRef}>
+    <div className="overflow-hidden px-1 sm:p-4 py-10" ref={emblaRef}>
       <div className="flex">
         {clients.map((client: any) => (
           <div

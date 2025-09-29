@@ -75,11 +75,11 @@ export default function Hero() {
           className={`max-w-3xl p-4 sm:p-8 md:p-12 lg:p-20 rounded-4xl  flex flex-col items-center justify-center text-center transition-all duration-500 ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
             }`}
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white whitespace-pre-line leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl mb-4 sm:mb-6 text-white whitespace-pre-line leading-tight">
             Building A Better <br />
             Future
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-3xl py-3 sm:py-4 md:py-6 px-2">
+          <p className="text-sm sm:text-base lg:text-xl text-white max-w-3xl py-3 sm:py-4 md:py-6 px-2">
             Green Oasis General Contracting CO. LLC. is a flagship company of the Extra Co. Group that is dedicated and committed in providing the society with top quality infrastructure, commercial and residential project.
           </p>
           <Link

@@ -37,20 +37,20 @@ export default function Projects() {
           <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-1">
             <img src={bg} alt="bg-services" className="w-full h-[150px] sm:h-[300px] object-cover object-bottom" />
           </div>
-          <div className="mx-4 sm:mx-40 relative z-10 px-4">
+          <div className="mx-4 sm:mx-40 relative z-10 px-4 pt-16 sm:pt-4">
             <h2 className="text-2xl sm:text-5xl font-bold text-white text-center">
               Our Projects
             </h2>
           </div>
         </div>
-        <div className="text-gray-900 mb-8 mx-20">
-          <p className="mb-10 text-justify mx-40">
+        <div className="text-gray-900 sm:mb-8 sm:mx-20 p-8 sm:pt-0">
+          <p className="mb-4 sm:mb-12 text-justify sm:mx-40">
             At GOC Group of Companies, we take pride in delivering impactful projects that shape communities, support industries, and drive progress across the region. With a strong foundation in engineering excellence, innovation, and quality execution, our diverse portfolio spans multiple sectors—including infrastructure development, pipeline systems, petrol stations, and electrical substations.
             <br />
             <br />
             Every project we undertake reflects our commitment to precision, sustainability, and client satisfaction. Whether we’re building essential public utilities or advanced industrial facilities, our focus remains on delivering solutions that are safe, reliable, and built to last.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 justify-between">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 justify-between">
             {projects.map((p) => (
               <div className='flex flex-col justify-center items-center'>
                 <Link
